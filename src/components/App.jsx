@@ -21,8 +21,8 @@ export class App extends Component {
 
     if (storageContacts) {
       try {
-        this.setState({ contacts: parsedContacts });
         const parsedContacts = JSON.parse(storageContacts);
+        this.setState({ contacts: parsedContacts });
       } catch (error) {
         this.setState({ contacts: [] });
       }
