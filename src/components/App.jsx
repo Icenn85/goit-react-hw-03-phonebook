@@ -18,11 +18,11 @@ export class App extends Component {
 
   componentDidMount() {
     const storageContacts = localStorage.getItem('contacts');
-    const parsedContacts = JSON.parse(storageContacts);
 
     if (storageContacts) {
       try {
         this.setState({ contacts: parsedContacts });
+        const parsedContacts = JSON.parse(storageContacts);
       } catch (error) {
         this.setState({ contacts: [] });
       }
